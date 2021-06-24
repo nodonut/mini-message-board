@@ -7,6 +7,7 @@
 }
 
 body {
+  height: 100vh;
   background: linear-gradient(to top left, hsl(221, 72%, 53%), hsl(221, 88%, 35%));
 }
 
