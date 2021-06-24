@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="content">
+      <% for (let i = 0; i < messages.length; i++) { %>
+      <div class="user-wrapper">
+        <p class="user-name"><%= messages[i].user %></p>
+        <p class="date"><%= messages[i].added %></p>
+        <p class="user-content"><%= messages[i].text %></p>
+      </div>
+      <% } %>
+    </div>
+    <div class="form">
+      <form action="/new" method="post">
+        <label for="name" class="label"> Name </label>
+        <input type="text" class="input name" name="name" />
+        <label for="message" class="label"> Message </label>
+        <input type="text" class="input" name="message" />
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
